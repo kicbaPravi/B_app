@@ -1,0 +1,205 @@
+// ----------------------- HEADER start -----------------------
+
+.header {
+  width: 100%;
+  background-color: black;
+  height: 8vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchBox_container {
+  input {
+    width: 35rem;
+    padding: 6px;
+    font-size: 17px;
+    border: none;
+  }
+
+  button {
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    background: #ff1493;
+    width: 6rem;
+    color: white;
+
+    &:hover {
+      background: grey;
+    }
+  }
+}
+
+// ----------------------- HEADER end -----------------------
+
+// ----------------------- BODY start -----------------------
+
+.container {
+  max-width: 90rem;
+  margin: auto;
+  //   background-color: lightgrey;
+}
+
+.title {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.line {
+  margin-top: 5px;
+  width: 3rem;
+  height: 5px;
+  background-color: palevioletred;
+}
+
+// ----------------------- Grid Container start -----------------------
+
+.boxContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.box {
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  //   border: 1px solid grey;
+  width: 32%;
+  position: relative;
+  margin-top: 10px;
+
+  h2 {
+    text-transform: capitalize;
+    color: #fff;
+    position: absolute;
+    top: 100px;
+    padding-left: 3%;
+    font-size: 2rem;
+  }
+  p {
+    text-align: left;
+    padding-left: 3%;
+    font-size: 1.4rem;
+    color: #484848;
+  }
+
+  img {
+    width: 100%;
+    height: 130px;
+    block-size: cover;
+  }
+
+  div {
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+}
+
+.icons {
+  vertical-align: text-top;
+  margin-right: 0.6rem;
+}
+// ----------------------- Grid Container End -----------------------
+
+// ----------------------- List Container Start -----------------------
+
+.listContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list_item {
+  width: 100%;
+  border-bottom: 1px solid grey;
+  color: #484848;
+  height: 80%;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .list_item_container {
+    margin-top: 7px;
+    margin-bottom: 7px;
+    display: flex;
+  }
+
+  p {
+    margin-bottom: 0.5rem;
+  }
+
+  .listImage {
+    flex: 2;
+
+    display: flex;
+    img {
+      width: 100%;
+      height: 93px;
+      block-size: cover;
+      margin-bottom: 10px;
+    }
+  }
+  .date {
+    flex: 0.8;
+    font-size: 1.9rem;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: text-bottom;
+
+    .day {
+      font-size: 2.5rem;
+    }
+  }
+  .details {
+    flex: 4;
+
+    font-size: 1.5rem;
+
+    .time {
+      color: #ff1493;
+      font-weight: bold;
+    }
+
+    .widthHeight {
+      font-size: 2rem;
+    }
+  }
+  .find {
+    flex: 2.5;
+
+    .button {
+      padding: 10px 52px;
+      text-align: center;
+      display: inline-block;
+      margin-top: 2.7rem;
+      margin-left: 13%;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #ff1493;
+      color: #fff;
+    }
+  }
+}
+
+// ----------------------- List Container End -----------------------
+
+.footer {
+  width: 100%;
+  margin-top: 5rem;
+  font-size: 1.5rem;
+  background-color: black;
+  height: 4vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// ----------------------- BODY end -----------------------
