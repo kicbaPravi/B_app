@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import axios from "axios";
 
 const Context = React.createContext();
@@ -7,7 +7,7 @@ const StateConsumer = Context.Consumer;
 export default class StateProvider extends Component {
   state = {
     boxes: [],
-    filteredBoxes: []
+    tempValue: ""
   };
 
   componentDidMount() {
@@ -18,11 +18,15 @@ export default class StateProvider extends Component {
     });
   }
 
-  filteredBoxes() {}
+  updateValue = value => {
+    this.setState({ tempValue: value });
+  };
 
   render() {
     return (
-      <Context.Provider value={{ ...this.state }}>
+      <Context.Provider
+        value={{ ...this.state, updateValue: this.updateValue }}
+      >
         {this.props.children}
       </Context.Provider>
     );

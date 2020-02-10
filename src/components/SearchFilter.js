@@ -1,26 +1,32 @@
-import React, { Component } from "react";
+import React from "react";
+import { StateConsumer } from "../Context";
 
-export default class SearchFilter extends Component {
-  state = {
-    tempValue: ""
-  };
+export default function SearchFilter() {
+  return (
+    <StateConsumer>
+      {({ updateValue }) => {
+        return (
+          <>
+            <input
+              type="text"
+              placeholder="Search for artist, event or venue"
+              onChange={e => updateValue(e.target.value)}
+            />
+            <button>Go</button>
+          </>
+        );
+      }}
+    </StateConsumer>
+  );
+}
 
-  onChange = e => {
-    this.setState({
-      tempValue: e.target.value
-    });
-  };
-
-  render() {
-    return (
-      <>
-        <input
-          type="text"
-          placeholder="Search for artist, event or venue"
-          onChange={this.onChange}
-        />
-        <button>Go</button>
-      </>
-    );
-  }
+{
+  /* <>
+<input
+  type="text"
+  placeholder="Search for artist, event or venue"
+  onChange={e => updateValue(e.target.value)}
+/>
+<button>Go</button>
+</> */
 }
