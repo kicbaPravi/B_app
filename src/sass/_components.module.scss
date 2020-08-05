@@ -12,7 +12,8 @@
 
 .searchBox_container {
   input {
-    width: 35rem;
+    width: 20rem;
+    margin-right: 1rem;
     padding: 6px;
     font-size: 17px;
     border: none;
@@ -27,7 +28,6 @@
     border: none;
     cursor: pointer;
     background: #ff1493;
-    width: 6rem;
     color: white;
 
     &:hover {
@@ -49,6 +49,22 @@
 .title {
   margin-top: 3rem;
   margin-bottom: 1rem;
+}
+
+.sortButton {
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  background: #ff1493;
+  color: white;
+
+  &:hover {
+    background: grey;
+  }
 }
 
 .line {

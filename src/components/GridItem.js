@@ -3,24 +3,24 @@ import style from "../sass/_components.module.scss";
 import { FaCalculator } from "react-icons/fa";
 import { FaGoogleDrive } from "react-icons/fa";
 
-export default function GridItem({ item }) {
-  const { author, width, height, url, download_url } = item;
+export default function GridItem({ value }) {
+  const { Poster, Title, Year, Type } = value;
 
   return (
     <div className={style.box}>
-      <h2>{author}</h2>
-      <a href={url}>
-        <img src={download_url} alt={author} />
+      <a href={Poster}>
+        <img src={Poster} alt={Type} />
       </a>
 
       <div>
+        <h1>{Title}</h1>
         <p>
           <FaCalculator className={style.icons} />
-          Height: {height}
+          Year: {Year}
         </p>
         <p>
           <FaGoogleDrive className={style.icons} />
-          Width: {width}
+          Type: {Type}
         </p>
       </div>
     </div>

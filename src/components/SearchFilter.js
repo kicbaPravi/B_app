@@ -1,18 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { StateConsumer } from "../Context";
 
 export default function SearchFilter() {
+  const [nameOfMovie, updateName] = useState("");
+  const [yearOfMovie, updateYear] = useState("");
+
   return (
     <StateConsumer>
-      {({ updateValue }) => {
+      {({ findMovie, clearInputs }) => {
         return (
           <>
             <input
               type="text"
-              placeholder="Search for artist, event or venue"
-              onChange={e => updateValue(e.target.value)}
+              placeholder="Name"
+              onChange={(e) => updateName(e.target.value)}
             />
-            <button>Go</button>
+            <input
+              type="number"
+              placeholder="Year"
+              onChange={(e) => updateYear(e.target.value)}
+            />
+            <button onClick={() => findMovie(nameOfMovie, yearOfMovie)}>
+              Search
+            </button>
+            <button onClick={() => clearInputs()}>X</button>
           </>
         );
       }}
@@ -20,13 +31,4 @@ export default function SearchFilter() {
   );
 }
 
-{
-  /* <>
-<input
-  type="text"
-  placeholder="Search for artist, event or venue"
-  onChange={e => updateValue(e.target.value)}
-/>
-<button>Go</button>
-</> */
-}
+// onChange={(e) => updateValue(e.target.value)}
